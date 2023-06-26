@@ -102,21 +102,25 @@ menu.addEventListener("click", menu_button_click);
 
 function menu_button_click(event){
     //console.log(event.target);
-    if (event.target.classList.contains('ABOUT_US'))
+    if (event.target.classList.contains('ABOUT_US') ||
+    event.target.parentNode.parentNode.classList.contains('ABOUT_US'))
     {
-        Menu_controll();
+        if (innerWidth < 767) Menu_controll();
         description_unit.scrollIntoView({block: "center", behavior: "smooth"});
-    } else if (event.target.classList.contains('WORK'))
+    } else if (event.target.classList.contains('WORK') ||
+    event.target.parentNode.parentNode.classList.contains('WORK'))
     {
-        Menu_controll();
+        if (innerWidth < 767) Menu_controll();
         work_unit.scrollIntoView({block: "start", behavior: "smooth"});
-    } else if (event.target.classList.contains('SHOP'))
+    } else if (event.target.classList.contains('SHOP') ||
+    event.target.parentNode.parentNode.classList.contains('SHOP'))
     {
-        Menu_controll();
+        if (innerWidth < 767) Menu_controll();
         shop_unit.scrollIntoView({block: "start", behavior: "smooth"});
-    } else if (event.target.classList.contains('CONTACT'))
+    } else if (event.target.classList.contains('CONTACT') ||
+    event.target.parentNode.parentNode.classList.contains('CONTACT'))
     {
-        Menu_controll();
+        if (innerWidth < 767) Menu_controll();
         contact_unit.scrollIntoView({block: "center", behavior: "smooth"});
     }
 }

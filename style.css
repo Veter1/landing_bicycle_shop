@@ -592,6 +592,7 @@ main{
                 } 
             }
             .email_button{
+                min-width: 80px;
                 width: 20%;
                 height: 70px;
                 background-color: #64c29e;
@@ -605,6 +606,7 @@ main{
                 text-align: center;
                 text-transform: uppercase;
                 @media screen and (max-width:419px){
+                    min-width: 50px;
                     width: 25%;
                 } 
             }
